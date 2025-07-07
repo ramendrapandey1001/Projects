@@ -1,0 +1,15 @@
+<div class="lift-container text-center my-3">
+	<h5>Lift #{{ liftNumber }}</h5>
+	
+	<div class="lift-frame position-relative d-inline-block">
+	  <!-- Left Door -->
+	  <div class="door left-door" [class.open]="isOpen"></div>
+	  
+	  <!-- Right Door -->
+	  <div class="door right-door" [class.open]="isOpen"></div>
+	</div>
+  
+	<p class="mt-2 fw-bold text-{{ isOpen ? 'success' : 'danger' }}">
+	  {{ isOpen ? 'Doors Open' : 'Doors Closed' }}
+	</p>
+  </div>
